@@ -1,0 +1,21 @@
+---
+import { BioBrief, LinksURL, JobTitle, PrimaryAlias, RealName } from '../content/constants/About'
+---
+
+<div class="pb-12 mt-5">
+  <div class="text-5xl font-bold">
+    Heyo, I'm {RealName} &
+    <a href={LinksURL} class="underline" target="_blank">@{PrimaryAlias}</a>
+  </div>
+
+  <div class="text-3xl py-3 font-bold">{JobTitle}</div>
+
+  <div class="py-2"><text class="text-lg">{BioBrief}</text></div>
+
+  <div class="mt-8">
+    <a class="btn" href={LinksURL} target="_blank">Let's connect!</a>
+    <a href="https://git.4lch4.io/4lch4/4lch4.com" target="_blank" class="btn btn-outline ml-5">
+      View site source
+    </a>
+  </div>
+</div>
