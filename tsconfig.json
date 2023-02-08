@@ -7,6 +7,7 @@
       "@lib/*": ["lib/*"],
       "@utils/*": ["utils/*"],
       "@components/*": ["components/*"],
+      "@constants/*": ["content/constants/*"],
       "@layouts/*": ["layouts/*"],
       "@assets/*": ["assets/*"],
       "@pages/*": ["pages/*"]
