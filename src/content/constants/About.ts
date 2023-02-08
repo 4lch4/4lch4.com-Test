@@ -1,7 +1,7 @@
 /** My primary online name/alias. */
 export const PrimaryAlias = '4lch4'
 
-/** My real name, including first, middle initial, and last. */
+/** My real name, including first, middle initial, and last names. */
 export const RealName = 'Devin W. Leaman'
 
 /** My "personal" job title, not my official title at my current gig. */
