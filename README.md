@@ -1,14 +1,36 @@
-# Astro Modern Personal Website
+# 4lch4.com — 4lch4's Homepage
+
+This repository is home to the codebase for my personal website/homepage on the internet: [4lch4.com][1]
+
+## Architecture/Dependencies
+
+The website started off of with the [Astro Modern Personal Website template][0], created by [Manuel Ernesto Garcia][2], and then I began to modify it to fit my needs and make it stand out if compared to another site with the same template.
+
+As the template I used may have hinted, the website is built using [Astro][3] and uses the following dependencies:
+
+| Name             | Purpose/Description                    |
+| ---------------- | -------------------------------------- |
+| [TailwindCSS][4] | Perfect for styling my site with ease. |
+| [Prettier][5]    | For styling/linting the codebase.      |
+| [Dayjs][6]       | For formatting/managing dates.         |
+| [DaisyUI][7]     | Provides some reusable components.     |
+| [Vercel][8]           | Hosts the built website.               |
+
+## Initial Content
+
+Everything from this point on is the content of the README as it was when I started work with the [Astro Modern Personal Website template][0]. The only changes made were to the heading levels, which I incremented by one.
+
+## Astro Modern Personal Website
 
 ![Astro Modern Personal Website](public/social_img.png)
 
 Modern Personal Website Template with Project Section, CV Section, Paginated Blog, RSS Feed, SEO Friendly, Visual themes and Responsive Desing for Astro framework.
 
-## Demo
+### Demo
 
 View a live demo of the [Astro Modern Personal Website](https://astro-modern-personal-website.netlify.app/)
 
-## Installation
+### Installation
 
 Run the following command in your terminal
 
@@ -22,16 +44,15 @@ Once the packages are installed you are ready to run astro. Astro comes with a b
 npm run dev
 ```
 
-## Tech Stack
+### Tech Stack
 
 - [Astro](https://astro.build)
 - [tailwindcss](https://tailwindcss.com/)
 - [DaisyUI](https://daisyui.com/)
 
-## Project Strucutre
+### Project Strucutre
 
-
-``` php
+```php
 ├── src/
 │   ├── components/
 │   │   ├── cs/
@@ -74,13 +95,13 @@ npm run dev
 └── tsconfig.json
 ```
 
-### Components usage
+#### Components usage
 
-#### Layout Components
+##### Layout Components
 
 The `BaseHead`, `Footer`, `Header` and `SideBar` components are already included in the layout sistem. To change the website content you can edit the content of this components.
 
-##### SideBar
+###### SideBar
 
 In the Sidebar you can change the links to all your website pages.
 
@@ -88,30 +109,25 @@ You can change your avatar shape using [mask classes](https://daisyui.com/compon
 
 The used social-icons are SVG form [BoxIcons](https://boxicons.com/) pack.
 
-#### TimeLine
+##### TimeLine
 
 The timeline components are used to conform the CV.
 
 ```html
 <div class="time-line-container">
-  <TimeLineElement
-    title="Element Title"
-    subtitle="Subtitle"
-    desc="Description"
-  />
+  <TimeLineElement title="Element Title" subtitle="Subtitle" desc="Description" />
   ...
 </div>
 ```
 
-#### Card & HorizontalCard
+##### Card & HorizontalCard
 
 ```html
-<HorizontalCard title="Card Title" img="imge_url" desc="Description" url="Link
-URL" target="Optional link target (_blank default)" badge="Optional badge"
-tags={['Array','of','tags']} />
+<HorizontalCard title="Card Title" img="imge_url" desc="Description" url="Link URL" target="Optional
+link target (_blank default)" badge="Optional badge" tags={['Array','of','tags']} />
 ```
 
-#### HorizontalCard Shop Item
+##### HorizontalCard Shop Item
 
 This compoenet is already included in the Store layout of the template. In case you want to use it in other place this are the props.
 
@@ -132,22 +148,23 @@ This compoenet is already included in the Store layout of the template. In case 
 />
 ```
 
-### Layouts
+#### Layouts
 
 Include `BaseLayout` in each page you add and `PostLayout` to your post pages.
 
-### Content
+#### Content
 
 You can add a [content collection](https://docs.astro.build/en/guides/content-collections/) in `/content/' folder, you will need add it at config.ts.
 
-#### config.ts
+##### config.ts
+
 Where you need to define your content collections, we define our content schemas too.
 
-#### Blog
+##### Blog
 
 Add your `md` blog post in the `/content/blog/` folder.
 
-##### Post format
+###### Post format
 
 Add code with this format in the top of each post file.
 
@@ -160,29 +177,29 @@ heroImage: "Post Hero Image URL"
 ---
 ```
 
-### Pages
+#### Pages
 
-#### Blog
+##### Blog
 
 Blog uses Astro's content collection to query post's `md`.
 
-##### [page].astro
+###### [page].astro
 
 The `[page].astro` is the route to work with the paginated post list. You can change there the number of items listed for each page and the pagination button labels.
 
-##### [slug].astro
+###### [slug].astro
 
 The `[slug].astro` is the base route for every blog post, you can customize the page layout or behaviour, by default uses `content/blog` for content collection and `PostLayout` as layout.
 
-#### Shop
+##### Shop
 
 Add your `md` item in the `/pages/shop/` folder.
 
-##### [page].astro
+###### [page].astro
 
 The `[page].astro` is the route to work with the paginated item list. You can change there the number of items listed for each page and the pagination button labels. The shop will render all `.md` files you incle inside this folder.
 
-##### Item format
+###### Item format
 
 Add code with this format in the top of each item file.
 
@@ -202,23 +219,23 @@ checkoutUrl: "https://checkouturl.com/"
 ---
 ```
 
-#### Static pages
+##### Static pages
 
 The other pages inlcuded in the template are static pages. The `index` page belong to the root page. You can add your pages directly in the `/pages` folder and then add a link to that pages in the `sidebar` component.
 
 Feel free to modify the content included in the pages that the template contains or add the ones you need.
 
-### Theming
+#### Theming
 
 For change the template theme change the `data-theme` atribute of the `<html>` tag in `BaseLayout.astro` file.
 
 You can chose among 30 themes available or create your custom theme. See themes available [here](https://daisyui.com/docs/themes/).
 
-## Sitemap
+### Sitemap
 
 The Sitemap is generated automatically when you build your website in the root of the domain. Please update the `robots.txt` file in the public folder with your site name URL for the Sitemap.
 
-## Deploy
+### Deploy
 
 You can deploy your site on your favorite static hosting service such as Vercel, Netlify, GitHub Pages, etc.
 
@@ -233,7 +250,7 @@ Suggestions and pull requests are welcomed! Feel free to open a discussion or an
 
 One of the best ways of contribute is to grab a [bug report o feature suggestion](https://github.com/manuelernestog/astro-modern-personal-website/issues) that has been marked `accepted` and dig in.
 
-Please be wary of working on issues *not* marked as `accepted`. Just because someone has created an issue doesn't mean we'll accept a pull request for it.
+Please be wary of working on issues _not_ marked as `accepted`. Just because someone has created an issue doesn't mean we'll accept a pull request for it.
 
 ## License
 
@@ -246,3 +263,13 @@ Astro Modern Personal Website is licensed under the MIT license — see the [LIC
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).
+
+[0]: https://github.com/manuelernestog/astro-modern-personal-website
+[1]: https://4lch4.com
+[2]: https://github.com/manuelernestog
+[3]: https://astro.build
+[4]: https://tailwindcss.com
+[5]: https://prettier.io/
+[6]: https://day.js.org
+[7]: https://daisyui.com
+[8]: https://vercel.com/
